@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon-/-close" transform="translate(-7.000000, -8.000000)" stroke="#FFFFFF">
+            <g id="Group" transform="translate(14.500000, 15.000000) rotate(45.000000) translate(-14.500000, -15.000000) translate(5.000000, 5.000000)">
+                <g id="Group-2" transform="translate(0.717514, 10.217514)">
+                    <path d="M6,0 L18,0" id="Stroke-1"></path>
+                    <path d="M0,0 L3,0" id="Stroke-3"></path>
+                </g>
+                <g id="Group-2-Copy" transform="translate(10.717514, 10.217514) rotate(90.000000) translate(-10.717514, -10.217514) translate(1.217514, 8.717514)">
+                    <path d="M3,2 L19,2 L3,2 L0,2 L3,2 Z" id="Stroke-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

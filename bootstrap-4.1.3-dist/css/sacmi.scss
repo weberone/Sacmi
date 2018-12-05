@@ -1,0 +1,583 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* MIXIN */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+@mixin anim_hover_opacity {
+	text-decoration: none;
+	//text-transform: none; 
+	transition: opacity 0.3s ease-in-out;
+   -moz-transition: opacity 0.3s ease-in-out;
+   -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+@mixin anim_hover_all {
+	text-decoration: none;
+	//text-transform: none; 
+	transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+}
+
+@mixin noanim_hover_all {
+	text-decoration: none;
+	//text-transform: none; 
+	transition: all 0s ease-in-out;
+   -moz-transition: all 0s ease-in-out;
+   -webkit-transition: all 0s ease-in-out;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* FONTS */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+@mixin pt_mono {
+	font-family: 'PT Mono', monospace;
+}
+@mixin regular {
+	font-family:'KievitWeb W03 Regular';
+}
+@mixin book {
+	font-family:'Kievit OT W01 Book';
+}
+@mixin medium {
+	font-family:'KievitWeb W03 Medi';
+}
+@mixin bold {
+	font-family:'KievitWeb W03 Bold';
+}
+@mixin italic {
+	font-family:'KievitWeb W03 Ita';
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* IMPORT */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+@import 'color';
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* SYSTEM */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+body{
+  -webkit-overflow-scrolling: touch;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: $grigio_chiaro;
+  @include regular;
+  font-size: 15px;
+  line-height: 20px;
+  color: $nero;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+	transition: all 0.3s;
+	@include anim_hover_all;
+}
+
+header{
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	@media (max-width: 768px) { background: $bianco; }
+}
+
+main{
+	//min-height: 1000px;
+	padding-top: 28px;
+	@media (max-width: 768px) { padding-top: 123px; }
+}
+
+footer{
+	position: relative;
+	@media (max-width: 768px) {     
+		text-align: center;
+	}
+	.container{
+		z-index: 1;
+	}
+	.col-3, .col-6, .col-8{
+		@media (max-width: 768px) {     
+			flex: 0 0 100%;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+	color: $grigio2;
+	font-size: 12px;
+	line-height: 20px;
+	padding-bottom: 76px;
+	padding-top: 60px;
+	background: $nero url("../images/bg-footer.png") no-repeat right top;
+	@media (max-width: 768px) { 
+		padding-bottom: 50px;
+		padding-top: 150px; 
+	}
+	&:after{
+		content: url("../images/sacmi_logo_simbolo.png");
+		position: absolute;
+		z-index: 0;
+		top: 50%;
+		right: 312px;
+		margin-top: -190px;
+		@media (max-width: 576px) {  }
+		@media (max-width: 768px) { right: 50%; margin-right: -177px;}
+		@media (max-width: 992px) {  }
+		@media (max-width: 1200px) {  }
+	}
+	&:before{
+		content: url("../images/Sacmi_logo_footer.png");
+		position: absolute;
+		z-index: 0;
+		top: 50%;
+		margin-top: -21px;
+		right: 134px;
+		@media (max-width: 768px) { top:80px; right: 50%; margin-right: -68px;}
+	}
+	h5{
+		font-size: 13px;
+		line-height: 56px;
+		letter-spacing: 1.5px;
+		@include bold;
+		text-transform: uppercase;
+		color: $bianco;
+	}
+	p{
+		margin: 0px;
+		margin-top:5px;
+		@media (max-width: 768px) { margin-top:40px; }
+	
+	}
+	ul{
+		list-style: none;
+		padding: 0px;
+		li{
+			a{
+				font-size: 12px;
+				@include bold;
+				line-height: 30px;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				&:hover{
+					color: $bianco;
+				}
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* PRELOADER */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+#preloader { 
+	position: fixed; 
+	left: 0px; 
+	top: 0px; 
+	z-index: 300; 
+	width: 100%; 
+	height: 100%; 
+	overflow: visible; 
+	background: $grigio_chiaro;
+	&:after  {
+		content: url("../images/ajax-loader.gif");
+		position: absolute;
+		top:50%;
+		left: 50%;
+		margin-top: 15px;
+		margin-left: -8px;
+		width: 16px;
+		height: 16px;
+		z-index: 2;
+	}
+	&:before  {
+		content: url("../images/Sacmi_logo.png");
+		background: $grigio_chiaro;
+		position: absolute;
+		top:50%;
+		left: 50%;
+		margin: -41px 0px 0px -70px;
+		z-index: 4;
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* LANDSCAPE */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+.landscape{
+	position: absolute;
+	display: none; 
+	width: 100%;
+	height: 100%;
+	background: $grigio_chiaro;
+	h2{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		margin-top: 15px;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.5px;
+		color: $rosso;
+		text-transform: inherit;
+	}
+	&:before{
+		content: url("../images/Sacmi_logo.png");
+		background: $grigio_chiaro;
+		position: absolute;
+		top:50%;
+		left: 50%;
+		margin: -41px 0px 0px -70px;
+		z-index: 4;
+	}
+}
+
+@media (max-height: 480px) and (min-width: 480px) and (max-width: 600px) { 
+	header, main, footer{
+       display: none;
+    }
+    .landscape{
+    	display: block;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* BOOTSTRAP */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+.container{
+	@media (min-width: 1200px){
+		max-width: 1182px;
+	}
+}
+
+.bg-dark{
+	background: $nero!important;
+}
+
+.dropdown-toggle::after {
+	content: url("../images/caret.png");
+	border: none;
+	margin-left: 10px;
+	margin-top: -2px;
+}
+
+.jumbotron {
+	padding: 160px 100px;
+	margin: 0;
+	background: $grigio_chiaro;
+}
+
+.navbar{
+	padding: 0px;
+}
+
+.navbar-brand{
+	z-index: 200;
+	padding: 26px 0px;
+	img{
+		width: 140px;
+		height: 44px;
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* MENU SIDEBAR RIGHT */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+@import 'menu';
+ 
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* CUSTOM CSS */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+.linea_rossa{
+	background: $rosso;
+	margin-top: 12px;
+	margin-bottom: 24px;
+	height: 3px;
+	width: 44px;
+	@media (max-width: 768px) { left: 50%; position: relative; margin-left: -22px; }
+}
+
+.sacmi_navbar_center{
+	position: absolute;
+	width: 70%;
+	left: 15%;
+	@media (max-width: 576px) {  }
+	@media (max-width: 768px) { display: none; }
+	@media (max-width: 992px) {  }
+	@media (max-width: 1200px) {  }
+
+	ul{
+		li{
+			a{
+				@include bold;
+				font-size: 13px;
+				letter-spacing: 1.86px;
+				text-transform: uppercase;
+				@media (max-width: 992px) { font-size: 10px; letter-spacing: 1.86px;  }
+				@media (max-width: 768px) { display: inline-block; }
+				&.nav-link{
+					padding: 14px!important; 
+					@media (max-width: 992px) { padding: 8px!important;  }
+				}
+				&:hover{
+					color: $rosso;
+				}
+				
+			}
+		}
+	}
+}
+
+.sacmi-navbar-service{
+	padding: 0px;
+	height: 28px;
+	.container{
+		ul.nav{
+			li{
+				a{
+					color: $bianco;
+					font-size: 10px;
+					letter-spacing: 1.43px;
+					text-transform: uppercase;
+					margin-right: 54px;
+					//margin-left: 7px;
+					cursor: pointer;
+					@include anim_hover_all;
+					@media (max-width: 768px) { margin-right: 28px; }
+					&:hover{
+						color: $rosso;
+						@include anim_hover_all;
+					}
+				}
+				&:last-child{
+					a{
+						margin-right: 7px;
+					}
+				}
+				&.dropdown{
+					&.open>a{
+						//background-color: $rosso!important;
+					}
+					.dropdown-menu {
+						min-width: 0px;
+						width: max-content;
+						background-color: $nero;
+						max-height: 490px;
+						margin-left: -15px;
+						border: none!important;
+						border-radius: 0;
+						-webkit-border-bottom-right-radius: 4px;
+						-webkit-border-bottom-left-radius: 4px;
+						-moz-border-radius-bottomright: 4px;
+						-moz-border-radius-bottomleft: 4px;
+						border-bottom-right-radius: 4px;
+						border-bottom-left-radius: 4px;
+					//	left: 0px;
+						
+						@media screen and (max-width: 767px) {
+							//max-height: 280px;
+						}
+						li{
+							a{
+								padding: 0px 15px;
+								margin-right: 0px;
+								margin: 0px;
+								@media screen and (max-width: 767px) {
+									//padding: 10px 15px;
+									//border-top: 1px solid $grigio_chiaro;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal_menu{
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgba(255, 255, 255, 1);
+  	-webkit-transition: opacity 600ms, visibility 600ms;
+ 	transition: opacity 600ms, visibility 600ms;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	z-index: 150;
+}
+
+.view_modal{
+	opacity: 0.8;
+	visibility: visible;
+}
+
+#burger_btn_menu{
+	width: 30px;
+	height: 30px;
+	background: url("../images/burger_menu.svg") no-repeat center center;
+	margin-bottom: 0;
+	//@media (max-width: 768px) { background: $grigio_chiaro url("../images/burger_menu.svg") no-repeat center center; }
+}
+
+#search_btn_menu{
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius: 0;
+	background: url("../images/search.svg") no-repeat center center;
+	margin-bottom: 0;
+	position: absolute;
+	right: 68px;
+	margin-right: 15px;
+	//@media (max-width: 768px) { background: $grigio_chiaro url("../images/search.svg") no-repeat center center; }
+	//padding: 15px;
+}
+
+.close_btn{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border: solid 1px $grigio;
+	border-radius: 50px;
+	right: 69px;
+	top: 51px!important;
+	background: $nero url("../images/x.svg") no-repeat center center;
+	@include anim_hover_all;
+	&:hover{
+		border: solid 1px $bianco;
+		@include anim_hover_all;
+	}
+}
+
+.menu_red_label{
+	top: 68px;
+	left: 42px;
+	position: absolute;
+	font-size: 14px;
+	line-height: 15px;
+	letter-spacing: 2.33px;
+	color: $rosso;
+	display: inline;
+}
+
+.back_btn{
+	width: 50px!important;
+	height: 50px;
+	cursor: pointer;
+	border: solid 1px $grigio;
+	border-radius: 50px;
+	right: 69px!important;
+	//left: 42px!important;
+	top: 51px!important;
+	transform: scale(1, 1)!important;
+	background: $nero url("../images/back.svg") no-repeat 17px center;
+	@include anim_hover_all;
+	&:hover{
+		border: solid 1px $bianco;
+		@include anim_hover_all;
+	}
+}
+
+.sacmi_social_link {
+	a{
+		@media (max-width: 768px) { display: inline-block; }
+		.icon {
+			position:relative;
+			text-align:center;
+			width:38px;
+			height:38px;
+			border-radius: 38px;
+			&.social {
+				float:left;
+				margin:0 11px 11px 0;
+				cursor:pointer;
+				background:$nero ;
+				color:$rosso;
+				border: 1px solid $grigio2;
+				@include anim_hover_all;
+				&:hover {
+					background:$grigio ;
+					color:$bianco;
+					@include anim_hover_all;
+				}
+				i {
+					font-size:12px;
+					position:absolute;
+					left:12px;
+					top:12px;
+				}
+				&.fb i {
+					left:14px;
+				}
+				&.tw i {
+			
+				}
+				&.in i {
+					
+				}
+				&.vm i {
+				
+				}
+			}
+		}
+	}
+}
+
+
+  
+ 
+
+  

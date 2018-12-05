@@ -1,0 +1,171 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* MENU SIDEBAR RIGHT */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+body { overflow-x:hidden; -webkit-animation:androidbugfix infinite 1s }
+@-webkit-keyframes androidbugfix { from {padding:0} to {padding:0} } 
+
+.toggle {
+	position: absolute;
+	right: 0px;
+	font-size: 40px;
+	cursor: pointer;
+	z-index: 150;
+}
+
+#main-nav-check, #menu .sub-nav-check {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+#main-nav-check:checked ~ #menu, #menu .sub-nav-check:checked ~ [id$="-sub"] {
+	-webkit-transform: translate(-363px, 0);
+	-ms-transform: translate(-363px, 0);
+	transform: translate(-363px, 0);
+}
+
+
+
+#menu, .sub-nav{
+	position: fixed;
+	top: 0px;
+	bottom: 0;
+	width: 355px;
+	max-height: 768px;
+	background: $nero url("../images/sacmi_pattern_bg_menu.png") no-repeat left top;
+	z-index: 200;
+	right: -363px;
+	-webkit-border-bottom-left-radius: 70px;
+	-moz-border-radius-bottomleft: 70px;
+	border-bottom-left-radius: 70px;
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: transform .25s ease;
+	-webkit-transform: translate3d(0, 0, 0);
+	border-right: 8px solid$rosso;
+}
+
+#menu {
+	overflow-y: scroll;
+	&::-webkit-scrollbar { 
+		display: none; 
+	}
+	label {
+		padding: 0 0.25em;
+		&:hover {
+			color: green;
+		}
+	}
+	.sacmi_social_link{
+		position: absolute;
+		left:42px;
+		bottom: 50px;
+		@media screen and (max-height: 670px) {
+			position: relative;
+			top: 25px;
+			margin-bottom: 140px;
+		}
+	}
+	nav{
+		margin-top: 128px;
+		ul {
+			line-height: 32px;
+			text-decoration: none;
+			padding: 0;
+			list-style: none;
+			margin-bottom: 32px;
+			li {
+				a {
+					display: block;
+					font-size: 12px;
+					letter-spacing: 2px;
+					padding-left: 42px;
+					color: $grigio_chiaro_2;
+					@include bold;
+					text-decoration: none;
+					text-transform: uppercase;
+					&:hover {
+						color: $bianco;
+					}
+					&.active{
+						color: $rosso;
+					}
+				}
+			}
+			&.regular{
+				li{
+					a{
+						@include regular;
+					}
+				}
+			}
+			&.italic{
+				li{
+					a{
+						@include regular;
+						font-style: italic;
+					}
+				}
+			}
+		}
+	}
+	.sub-nav {
+		margin-top: -1px;
+		.toggle {
+			top: 0;
+			-webkit-transform: scale(-1, 1);
+			-ms-transform: scale(-1, 1);
+			transform: scale(-1, 1);
+		}
+		.sub-heading {
+			margin-top: 128px;
+			padding-left: 1.3125em;
+		}
+	}
+	.toggle-sub {
+		width: 26px;
+		height: 26px;
+		background: url("../images/sacmi_menu_arrow.svg") no-repeat center center;
+		float: right;
+		opacity: 0.3;
+		margin-right: 81px;
+		margin-top: -29px;
+		color: $bianco;
+		cursor: pointer;
+		text-align: center;
+		@include anim_hover_all;
+		&:hover { 
+			opacity: 1;
+			@include anim_hover_all;
+		}
+	}
+	.close-all {
+		-webkit-transform: translate3d(0, 0, 0);
+		display: none;
+	}
+}
+.sub-nav{
+	margin-right: -8px;
+}
+
+.js #menu {
+	.close-all {
+		display: inline;
+	}
+	.toggle {
+		top: 0;
+		z-index: 150;
+	}
+	.sub-nav .toggle {
+		right: 0.15em;
+		
+	}
+}

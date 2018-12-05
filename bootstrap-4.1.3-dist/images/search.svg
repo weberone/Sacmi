@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon-/-search" transform="translate(-6.000000, -6.000000)" stroke="#323232">
+            <g id="Group" transform="translate(7.000000, 7.000000)">
+                <path d="M16,16 L17,17" id="Stroke-1"></path>
+                <path d="M11.9501402,2.04985981 C14.6832866,4.78400629 14.6832866,9.21624373 11.9501402,11.9493901 C9.21699377,14.6835366 4.78375627,14.6835366 2.05060985,11.9493901 C-0.683536618,9.21624373 -0.683536618,4.78400629 2.05060985,2.04985981 C4.78375627,-0.683286605 9.21699377,-0.683286605 11.9501402,2.04985981 Z" id="Stroke-3"></path>
+                <path d="M11.9586187,11.9586187 L14.5,14.5" id="Stroke-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

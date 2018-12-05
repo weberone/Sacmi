@@ -1,0 +1,783 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* MIXIN */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* FONTS */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=PT+Mono");
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* IMPORT */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* SACMI */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* SYSTEM */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+body {
+  -webkit-overflow-scrolling: touch;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #F4F4F4;
+  font-family: 'KievitWeb W03 Regular';
+  font-size: 15px;
+  line-height: 20px;
+  color: #323232;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  header {
+    background: #ffffff;
+  }
+}
+
+main {
+  padding-top: 28px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 123px;
+  }
+}
+
+footer {
+  position: relative;
+  color: #7B7B7B;
+  font-size: 12px;
+  line-height: 20px;
+  padding-bottom: 76px;
+  padding-top: 60px;
+  background: #323232 url("../images/bg-footer.png") no-repeat right top;
+}
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+}
+
+footer .container {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  footer .col-3, footer .col-6, footer .col-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 50px;
+    padding-top: 150px;
+  }
+}
+
+footer:after {
+  content: url("../images/sacmi_logo_simbolo.png");
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 312px;
+  margin-top: -190px;
+}
+
+@media (max-width: 768px) {
+  footer:after {
+    right: 50%;
+    margin-right: -177px;
+  }
+}
+
+footer:before {
+  content: url("../images/Sacmi_logo_footer.png");
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  margin-top: -21px;
+  right: 134px;
+}
+
+@media (max-width: 768px) {
+  footer:before {
+    top: 80px;
+    right: 50%;
+    margin-right: -68px;
+  }
+}
+
+footer h5 {
+  font-size: 13px;
+  line-height: 56px;
+  letter-spacing: 1.5px;
+  font-family: 'KievitWeb W03 Bold';
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  footer p {
+    margin-top: 40px;
+  }
+}
+
+footer ul {
+  list-style: none;
+  padding: 0px;
+}
+
+footer ul li a {
+  font-size: 12px;
+  font-family: 'KievitWeb W03 Bold';
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+footer ul li a:hover {
+  color: #ffffff;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* PRELOADER */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #F4F4F4;
+}
+
+#preloader:after {
+  content: url("../images/ajax-loader.gif");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 15px;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+}
+
+#preloader:before {
+  content: url("../images/Sacmi_logo.png");
+  background: #F4F4F4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -41px 0px 0px -70px;
+  z-index: 4;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* LANDSCAPE */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+.landscape {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #F4F4F4;
+}
+
+.landscape h2 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: #ce1e35;
+  text-transform: inherit;
+}
+
+.landscape:before {
+  content: url("../images/Sacmi_logo.png");
+  background: #F4F4F4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -41px 0px 0px -70px;
+  z-index: 4;
+}
+
+@media (max-height: 480px) and (min-width: 480px) and (max-width: 600px) {
+  header, main, footer {
+    display: none;
+  }
+  .landscape {
+    display: block;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* BOOTSTRAP */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1182px;
+  }
+}
+
+.bg-dark {
+  background: #323232 !important;
+}
+
+.dropdown-toggle::after {
+  content: url("../images/caret.png");
+  border: none;
+  margin-left: 10px;
+  margin-top: -2px;
+}
+
+.jumbotron {
+  padding: 160px 100px;
+  margin: 0;
+  background: #F4F4F4;
+}
+
+.navbar {
+  padding: 0px;
+}
+
+.navbar-brand {
+  z-index: 200;
+  padding: 26px 0px;
+}
+
+.navbar-brand img {
+  width: 140px;
+  height: 44px;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* MENU SIDEBAR RIGHT */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* MENU SIDEBAR RIGHT */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+  -webkit-animation: androidbugfix infinite 1s;
+}
+
+@-webkit-keyframes androidbugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+
+.toggle {
+  position: absolute;
+  right: 0px;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 150;
+}
+
+#main-nav-check, #menu .sub-nav-check {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+#main-nav-check:checked ~ #menu, #menu .sub-nav-check:checked ~ [id$="-sub"] {
+  -webkit-transform: translate(-363px, 0);
+  -ms-transform: translate(-363px, 0);
+  transform: translate(-363px, 0);
+}
+
+#menu, .sub-nav {
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  width: 355px;
+  max-height: 768px;
+  background: #323232 url("../images/sacmi_pattern_bg_menu.png") no-repeat left top;
+  z-index: 200;
+  right: -363px;
+  -webkit-border-bottom-left-radius: 70px;
+  -moz-border-radius-bottomleft: 70px;
+  border-bottom-left-radius: 70px;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: transform .25s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  border-right: 8px solid #ce1e35;
+}
+
+#menu {
+  overflow-y: scroll;
+}
+
+#menu::-webkit-scrollbar {
+  display: none;
+}
+
+#menu label {
+  padding: 0 0.25em;
+}
+
+#menu label:hover {
+  color: green;
+}
+
+#menu .sacmi_social_link {
+  position: absolute;
+  left: 42px;
+  bottom: 50px;
+}
+
+@media screen and (max-height: 670px) {
+  #menu .sacmi_social_link {
+    position: relative;
+    top: 25px;
+    margin-bottom: 140px;
+  }
+}
+
+#menu nav {
+  margin-top: 128px;
+}
+
+#menu nav ul {
+  line-height: 32px;
+  text-decoration: none;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+#menu nav ul li a {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding-left: 42px;
+  color: #A4A4A4;
+  font-family: 'KievitWeb W03 Bold';
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#menu nav ul li a:hover {
+  color: #ffffff;
+}
+
+#menu nav ul li a.active {
+  color: #ce1e35;
+}
+
+#menu nav ul.regular li a {
+  font-family: 'KievitWeb W03 Regular';
+}
+
+#menu nav ul.italic li a {
+  font-family: 'KievitWeb W03 Regular';
+  font-style: italic;
+}
+
+#menu .sub-nav {
+  margin-top: -1px;
+}
+
+#menu .sub-nav .toggle {
+  top: 0;
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+#menu .sub-nav .sub-heading {
+  margin-top: 128px;
+  padding-left: 1.3125em;
+}
+
+#menu .toggle-sub {
+  width: 26px;
+  height: 26px;
+  background: url("../images/sacmi_menu_arrow.svg") no-repeat center center;
+  float: right;
+  opacity: 0.3;
+  margin-right: 81px;
+  margin-top: -29px;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+#menu .toggle-sub:hover {
+  opacity: 1;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+#menu .close-all {
+  -webkit-transform: translate3d(0, 0, 0);
+  display: none;
+}
+
+.sub-nav {
+  margin-right: -8px;
+}
+
+.js #menu .close-all {
+  display: inline;
+}
+
+.js #menu .toggle {
+  top: 0;
+  z-index: 150;
+}
+
+.js #menu .sub-nav .toggle {
+  right: 0.15em;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* CUSTOM CSS */
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+.linea_rossa {
+  background: #ce1e35;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  height: 3px;
+  width: 44px;
+}
+
+@media (max-width: 768px) {
+  .linea_rossa {
+    left: 50%;
+    position: relative;
+    margin-left: -22px;
+  }
+}
+
+.sacmi_navbar_center {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+}
+
+@media (max-width: 768px) {
+  .sacmi_navbar_center {
+    display: none;
+  }
+}
+
+.sacmi_navbar_center ul li a {
+  font-family: 'KievitWeb W03 Bold';
+  font-size: 13px;
+  letter-spacing: 1.86px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .sacmi_navbar_center ul li a {
+    font-size: 10px;
+    letter-spacing: 1.86px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sacmi_navbar_center ul li a {
+    display: inline-block;
+  }
+}
+
+.sacmi_navbar_center ul li a.nav-link {
+  padding: 14px !important;
+}
+
+@media (max-width: 992px) {
+  .sacmi_navbar_center ul li a.nav-link {
+    padding: 8px !important;
+  }
+}
+
+.sacmi_navbar_center ul li a:hover {
+  color: #ce1e35;
+}
+
+.sacmi-navbar-service {
+  padding: 0px;
+  height: 28px;
+}
+
+.sacmi-navbar-service .container ul.nav li a {
+  color: #ffffff;
+  font-size: 10px;
+  letter-spacing: 1.43px;
+  text-transform: uppercase;
+  margin-right: 54px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .sacmi-navbar-service .container ul.nav li a {
+    margin-right: 28px;
+  }
+}
+
+.sacmi-navbar-service .container ul.nav li a:hover {
+  color: #ce1e35;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.sacmi-navbar-service .container ul.nav li:last-child a {
+  margin-right: 7px;
+}
+
+.sacmi-navbar-service .container ul.nav li.dropdown .dropdown-menu {
+  min-width: 0px;
+  width: max-content;
+  background-color: #323232;
+  max-height: 490px;
+  margin-left: -15px;
+  border: none !important;
+  border-radius: 0;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.sacmi-navbar-service .container ul.nav li.dropdown .dropdown-menu li a {
+  padding: 0px 15px;
+  margin-right: 0px;
+  margin: 0px;
+}
+
+.modal_menu {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  background-color: white;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  z-index: 150;
+}
+
+.view_modal {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+#burger_btn_menu {
+  width: 30px;
+  height: 30px;
+  background: url("../images/burger_menu.svg") no-repeat center center;
+  margin-bottom: 0;
+}
+
+#search_btn_menu {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 0;
+  background: url("../images/search.svg") no-repeat center center;
+  margin-bottom: 0;
+  position: absolute;
+  right: 68px;
+  margin-right: 15px;
+}
+
+.close_btn {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: solid 1px #464646;
+  border-radius: 50px;
+  right: 69px;
+  top: 51px !important;
+  background: #323232 url("../images/x.svg") no-repeat center center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.close_btn:hover {
+  border: solid 1px #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.menu_red_label {
+  top: 68px;
+  left: 42px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 2.33px;
+  color: #ce1e35;
+  display: inline;
+}
+
+.back_btn {
+  width: 50px !important;
+  height: 50px;
+  cursor: pointer;
+  border: solid 1px #464646;
+  border-radius: 50px;
+  right: 69px !important;
+  top: 51px !important;
+  transform: scale(1, 1) !important;
+  background: #323232 url("../images/back.svg") no-repeat 17px center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.back_btn:hover {
+  border: solid 1px #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .sacmi_social_link a {
+    display: inline-block;
+  }
+}
+
+.sacmi_social_link a .icon {
+  position: relative;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 38px;
+}
+
+.sacmi_social_link a .icon.social {
+  float: left;
+  margin: 0 11px 11px 0;
+  cursor: pointer;
+  background: #323232;
+  color: #ce1e35;
+  border: 1px solid #7B7B7B;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.sacmi_social_link a .icon.social:hover {
+  background: #464646;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.sacmi_social_link a .icon.social i {
+  font-size: 12px;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+
+.sacmi_social_link a .icon.social.fb i {
+  left: 14px;
+}

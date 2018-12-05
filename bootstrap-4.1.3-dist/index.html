@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Sacmi - v1.0</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/4287dd3f-1a29-475a-b901-f3ccd517dbac.css"/>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/sacmi.css"> 
+  </head>
+  <body>
+    <!--Preloader-->
+    <div id="preloader"></div>
+    <!--Menu Sideaber-->
+    <input type="checkbox" name="nav" id="main-nav-check">
+    <div id="menu"> 
+      <label for="main-nav-check" class="toggle close_btn" id="close_sidebar" onclick="" title="Close"></label>
+      <span class="menu_red_label">menu</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">about us</a> <label for="about_us" class="toggle-sub sacmi_menu_arrow" onclick=""></label>
+            <input type="checkbox" name="nav" id="about_us" class="sub-nav-check">
+            <ul id="about_us-sub" class="sub-nav">
+              <li class="sub-heading"><span class="menu_red_label">about us</span><label for="about_us" class="toggle back_btn" onclick="" title="Back"></label></li>
+              <li><a href="index.html">About 1</a></li>
+              <li><a href="index.html">About 2</a></li>
+              <li><a href="index.html">About 3</a></li>
+              <li><a href="index.html">About 4</a></li>
+              <li><a href="index.html">About 5</a> <label for="about_us_5" class="toggle-sub" onclick=""></label>
+                <input type="checkbox" name="nav" id="about_us_5" class="sub-nav-check">	
+                <ul id="about_us_5-sub" class="sub-nav">
+                  <li class="sub-heading"><span class="menu_red_label">about 5</span><label for="about_us_5" class="toggle back_btn" onclick="" title="Back"></label></li>
+                  <li><a href="index.html">About sub 1</a></li>
+                  <li><a href="index.html">About sub 2</a></li>
+                  <li><a href="index.html">About sub 3</a></li>
+                  <li><a href="index.html">About sub 4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html">industries</a> <label for="industries" class="toggle-sub" onclick=""></label>
+            <input type="checkbox" name="nav" id="industries" class="sub-nav-check">
+            <ul id="industries-sub" class="sub-nav">
+              <li class="sub-heading"><span class="menu_red_label">industries</span><label for="industries" class="toggle back_btn" onclick="" title="Back"></label></li>
+              <li><a href="index.html">industries 1</a></li>
+              <li><a href="index.html">industries 2</a></li>
+              <li><a href="index.html">industries 3</a></li>
+              <li><a href="index.html">industries 4</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html">services</a></li>
+          <li><a href="index.html">innovation</a></li>
+          <li><a href="index.html" class="active">careers <span style="font-size:8px;">(active status)</span></a></li>
+          <li><a href="index.html">newsroom</a></li>
+        </ul>
+        <ul class="regular">
+          <li><a href="index.html">corporate website</a> <label for="corporate_website" class="toggle-sub" onclick=""></label>
+            <input type="checkbox" name="nav" id="corporate_website" class="sub-nav-check">
+            <ul id="corporate_website-sub" class="sub-nav">
+              <li class="sub-heading"><span class="menu_red_label">corporate website</span><label for="corporate_website" class="toggle back_btn" onclick="" title="Back"></label></li>
+              <li><a href="index.html">www.website1.com</a></li>
+              <li><a href="index.html">www.website1.com</a></li>
+              <li><a href="index.html">www.website1.com</a></li>
+              <li><a href="index.html">www.website1.com</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html">locations</a></li>
+          <li><a href="index.html">contact us</a></li>
+        </ul>
+        <ul class="italic">
+          <li><a href="index.html">e-services</a></li>
+        </ul>
+        <!--<label class="toggle close-all close_btn" onclick="uncheckboxes(&#39;nav&#39;)"></label>-->
+      </nav>
+      <div class="sacmi_social_link">
+          <a href="#"><div class='icon social in'><i class="fab fa-linkedin-in"></i></div></a>
+          <a href="#"><div class='icon social vm'><i class="fab fa-vimeo-v"></i></div></a>
+          <a href="#"><div class='icon social tw'><i class="fab fa-twitter"></i></div></a>
+          <a href="#"><div class='icon social fb'><i class="fab fa-facebook-f"></i></i></div></a>
+        </div>
+    </div>
+    <!-- header -->
+    <header> <!--class="bg-white"-->
+      <div class="navbar bg-dark sacmi-navbar-service">
+        <div class="container d-block">
+          <ul class="nav float-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">corporporate</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">corporporate 1</a></li>
+                  <li><a href="#">corporporate 2</a></li>
+                  <li><a href="#">corporporate 3</a></li>
+                </ul>
+              </li>
+            <li><a href="#">locations</a></li>
+            <li><a href="#">contact us</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">IT</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">EN</a></li>
+                <li><a href="#">FR</a></li>
+                <li><a href="#">ES</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="container position-relative">
+          <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="images/Sacmi_logo.svg" alt="Logo Sacmi">
+          </a>
+          <nav class="navbar navbar-expand-sm justify-content-center sacmi_navbar_center">
+            <ul class="navbar-nav ">
+              <li class="nav-item "><a class="nav-link" href="#">About us</a></li>
+              <li class="nav-item "><a class="nav-link" href="#">Industries</a></li>
+              <li class="nav-item "><a class="nav-link" href="#">Services</a></li>
+              <li class="nav-item "><a class="nav-link" href="#">Innovation</a></li>
+            </ul>
+          </nav>
+          <button type="button" class="btn btn-primary" id="search_btn_menu"></button>
+          <label id="burger_btn_menu" for="main-nav-check" class="toggle position-relative" onclick="" title="Menu"></label>
+          <div class="modal_menu toggle close-all" onclick="uncheckboxes(&#39;nav&#39;)"></div>
+        </div>
+      </div>
+    </header>
+    <!--content-->
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <p class="lead text-muted">Main content.</p>
+        </div>
+      </section>
+    </main>
+    <!--footer-->
+    <footer class="d-flex">
+      <div class="container">
+        <div class="row">
+          <div class="col col-8">
+              <h5>BUSINESS AREAS WEBSITES</h5>
+              <div class="linea_rossa"></div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col col-3">
+              <ul>
+                <li><a href="index.html">corporate</a></li>
+                <li><a href="index.html">ceramics</a></li>
+                <li><a href="index.html">closures and containers</a></li>
+                <li><a href="index.html">beverage</a></li>
+              </ul>
+          </div>
+          <div class="col col-3">
+              <ul>
+                <li><a href="index.html">metals</a></li>
+                <li><a href="index.html">pACKAGING and CHOCOLATE</a></li>
+                <li><a href="index.html">QUALITY AND PROCESS CONTROL</a></li>
+                <li><a href="index.html">CUSTOMER SERVICE</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-8">
+              <h5>FOLLOW US</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-3">
+              <div class="sacmi_social_link">
+                <a href="#"><div class='icon social in'><i class="fab fa-linkedin-in"></i></div></a>
+                <a href="#"><div class='icon social vm'><i class="fab fa-vimeo-v"></i></div></a>
+                <a href="#"><div class='icon social tw'><i class="fab fa-twitter"></i></div></a>
+                <a href="#"><div class='icon social fb'><i class="fab fa-facebook-f"></i></i></div></a>
+              </div> 
+          </div>
+          <div class="col col-6">
+              <p>VAT N. IT00498321207 - CORP. REG. BO AND TAX CODE 00287010375 - R.E.A BO-8924</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--landscape message-->
+    <div class="landscape"><h2>Larghezza dello schermo minima 1280px</h2></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/global.js"></script>
+  </body>
